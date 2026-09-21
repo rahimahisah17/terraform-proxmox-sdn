@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- VNet `description` values are now applied as the Proxmox VNet alias. The
+  input was required but its value was previously discarded.
+
+### Changed
+- VNet descriptions must now satisfy the provider's alias rule: letters,
+  digits, spaces, and `- _ . ( )` only, up to 256 characters. The
+  `homelab-six-vlans` example description "Validation/testing network" was
+  changed to "Validation and testing network" accordingly.
+
 ## [0.2.0-beta.1] - 2026-08-26
 
 ### Added
